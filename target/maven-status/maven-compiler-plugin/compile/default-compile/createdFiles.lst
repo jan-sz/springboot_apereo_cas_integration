@@ -1,0 +1,12 @@
+pl\comarch\egeria\cas\client\filter\AbstractTicketValidationFilter.class
+pl\comarch\egeria\cas\client\filter\AuthenticationFilter.class
+pl\comarch\egeria\cas\client\filter\AbstractCasFilter.class
+pl\comarch\egeria\cas\client\Application.class
+pl\comarch\egeria\cas\client\controller\LoggedPageController.class
+pl\comarch\egeria\cas\client\FilterConfig.class
+pl\comarch\egeria\cas\client\controller\HelloWorldPage.class
+pl\comarch\egeria\cas\client\filter\CasAuthenticationFilter.class
+pl\comarch\egeria\cas\client\filter\CasAbstractTicketValidationFilter.class
+pl\comarch\egeria\cas\client\util\UtilClass.class
+pl\comarch\egeria\cas\client\config\SpringSecurityWebAppConfig.class
+pl\comarch\egeria\cas\client\controller\LoginPageController.class

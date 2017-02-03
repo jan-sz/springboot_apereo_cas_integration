@@ -1,0 +1,44 @@
+<configuration>
+    <!--<property name="LOG_DIR" value="logs"  /> -->
+    <property name="LOG_DIR" value="/logs"  />
+	<!-- Create a sysout appender -->
+    <appender name="sysout" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+			<Pattern>
+				%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n
+			</Pattern>
+		</layout>
+    </appender>
+
+    <!-- Create a file appender for INFO-level messages -->
+    <appender name="InfoLog" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>INFO</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>ACCEPT</onMismatch>
+        </filter>
+        <encoder>
+            <pattern>%d{HH:mm:ss} [%thread] %-5level %logger{10} - %msg%n</pattern>
+        </encoder>
+        <RollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_DIR}/casClient.%d{yyyy-MM-dd}.log.gz</fileNamePattern>
+            <maxHistory>30</maxHistory>
+            <cleanHistoryOnStart>true</cleanHistoryOnStart>
+        </RollingPolicy>
+    </appender>
+
+	<logger name="pl.js.springboot.cas.integration.client.*" level="DEBUG" additivity="false">
+        <appender-ref ref="sysout" />
+    </logger>
+	
+	<logger name="pl.js.springboot.cas.integration.client.*" level="INFO" additivity="false">
+        <appender-ref ref="sysout" />
+		<appender-ref ref="InfoLog" />
+    </logger>
+	
+    <root level="INFO">
+        <appender-ref ref="InfoLog" />
+		<appender-ref ref="sysout" />
+    </root>
+
+</configuration>

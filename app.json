@@ -1,0 +1,7 @@
+{
+  "name": "springboot_apereo_cas_integration",
+  "description": "Spring Boot client application for integration with Apereo CAS 5.0.1",
+  "repository": "https://github.com/jan-sz/springboot_apereo_cas_integration",
+  "keywords": ["spring boot", "CAS", "Apereo", "security", "authentication"],
+  "success_url": "/"
+}
