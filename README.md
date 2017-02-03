@@ -11,4 +11,4 @@ All that is needed for this client to work are: <br />
  <br />
  <br />
  <br />
-# Credit Jan Szczygie³ #
+# Credit Jan Szczygiel #
