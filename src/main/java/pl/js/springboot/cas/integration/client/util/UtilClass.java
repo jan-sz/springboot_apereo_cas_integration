@@ -6,8 +6,7 @@ public class UtilClass {
 
 	public static String getCurrentTimeString()
 	{
-        Timestamp timestamp = new Timestamp(System.currentTimeMillis());
-
+		Timestamp timestamp = new Timestamp(System.currentTimeMillis());
 		return timestamp.toString();		
 	}
 }
